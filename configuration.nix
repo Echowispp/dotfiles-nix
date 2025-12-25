@@ -12,6 +12,8 @@
 
   # Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  hardware.enableRedistributableFirmware = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
