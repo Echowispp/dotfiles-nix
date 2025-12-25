@@ -137,6 +137,7 @@
     gimp
     libreoffice
     steam
+    github-desktop
     
     # Shell
     zsh
