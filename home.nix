@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  shellscripts="${config.home.homeDirectory}/shellscripts";
+in 
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -26,6 +29,9 @@
     pkgs.hello
     
     geekbench
+    ascii-image-converter
+    jp2a
+    bc
     
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -89,10 +95,13 @@
 
     # zsh aliases
     shellAliases = {
+      fetsh = "${shellscripts}/fetsh.sh";
+
+      flashfetsh = "${shellscripts}/flashfetsh.sh";
+
       ll = "ls -lha";
     };
 
-    # Full initContent replaces initExtra
     initContent = ''
       # --- Kitty GPU Fix ---
       export KITTY_USE_EGL=0
@@ -101,6 +110,7 @@
       eval "$(starship init zsh)"
     '';
   };
+  
 
   # Starship config
   programs.starship = {
