@@ -19,20 +19,33 @@ tooltip label {
   color: white;
 }
 
+#workspaces {
+    background: #64727D;
+    margin: 5px;
+    border-radius: 999px;
+}
+
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-bottom: 3px solid transparent;
+    color: #44525D;
+    background: #64727D;
+    font-size: 12px;
+    padding: 11px 12px 12px 12px;
+    border-radius: 50%;
+    border: 1px white; 
 }
 
 #workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    color: #ffffff;
 }
 
-#mode, #clock, #battery {
-    padding: 0 10px;
+#custom-spacer {
+    border-radius: 999px 0 0 999px;
+    background-color: #64727D;
+}
+
+#custom-menu {
+    border-radius: 999px;
+    background: #64727D;
 }
 
 #mode {
@@ -42,11 +55,15 @@ tooltip label {
 
 #clock {
     background-color: #64727D;
+    padding: 5px;
+    border-radius: 999px;
+    margin: 5px;
 }
 
 #battery {
     background-color: #ffffff;
     color: black;
+    border-radius:999px 0 0 999px;
 }
 
 #battery.charging {

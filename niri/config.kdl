@@ -117,7 +117,7 @@ input {
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 16
+    gaps 20
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -201,10 +201,10 @@ layout {
     border {
         // The settings are the same as for the focus ring.
         // If you enable the border, you probably want to disable the focus ring.
-        off
+        // off
 
         width 4
-        active-color "#ffc87f"
+        active-color "#7fc8ff"
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -339,7 +339,7 @@ window-rule {
     // block-out-from "screencast"
 }
 
-window-rule {
+/-window-rule {
     match is-focused=false
 
     opacity 0.7
@@ -542,8 +542,8 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
+    Mod+Ctrl+N  { consume-or-expel-window-left; }
+    Mod+Ctrl+M { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
     Mod+Comma  { consume-window-into-column; }

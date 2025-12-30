@@ -6,15 +6,26 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
+    "include": "~/.config/waybar/modules.json",
     "modules-left": [
         "niri/workspaces"
     ],
     "modules-right": [
-        "battery",
-        "clock",
-        "custom/menu"
+      "custom/expand",
+      "battery",
+      "custom/spacer",
+      "clock"
     ],
     // Modules configuration
+    "custom/expand": {
+      "format": "⁝", // use this icon later!: 󰮎
+      "tooltip": false,
+      "on-click": "~/.config/waybar/expanded-bar.sh"
+    },
+    "custom/spacer": {
+      "format": "",
+      "expand": true
+    },
     "niri/workspaces": {
         "disable-scroll": true,
 	"disable-click": true
@@ -51,24 +62,7 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-    },
-    "custom/media": {
+   "custom/media": {
         "format": "{icon} {text}",
         "return-type": "json",
         "max-length": 40,

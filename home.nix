@@ -29,7 +29,9 @@ in
     pkgs.hello
     
     geekbench
+    fish
     ascii-image-converter
+    alacritty
     jp2a
     bc
     
@@ -59,7 +61,14 @@ in
 
     ".config/waybar/style.css".source = ./waybar/style.css;
     ".config/waybar/config.jsonc".source = ./waybar/config.jsonc;
+#    ".config/waybar/modules.json".source = ./waybar/modules.json;
 
+    ".config/waybar/modules.json".source = ./waybar/modules.json;
+
+    ".config/fastfetch/nix-logo.txt".source = ./fastfetch/nix-logo.txt;
+
+    ".config/waybar/expanded-bar.sh".source = ./waybar/expanded-bar.sh;
+    ".config/waybar/expanded.jsonc".source = ./waybar/expanded.jsonc;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
@@ -196,10 +205,10 @@ in
       # END_KITTY_FONTS
     
       font_size 14.0
+
+      background_opacity 0.9
     '';
   };
-  
-
 
   programs.fastfetch = {
     enable = true;
@@ -208,7 +217,8 @@ in
       "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json";
 
     logo = {
-      type = "builtin";   # or "ascii", "file"
+      type = "file";   # or "ascii", "file"
+      source = "~/.config/fastfetch/nix-logo.txt";
       height = null;
       padding = { top = 0; left = 0; right = 4; };
     };
