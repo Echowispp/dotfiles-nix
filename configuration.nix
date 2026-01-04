@@ -121,6 +121,14 @@
   xdg.portal.enable = true;
   services.udisks2.enable = true;
   
+  # Install Steam
+  programs.steam = {
+    enable = true;
+
+    gamescopeSession.enable = true;
+  };
+
+  programs.gamemode.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -133,13 +141,14 @@
     kitty-themes
     foot
     fuzzel
+    wofi
     ungoogled-chromium
     obs-studio
     mpv
     gimp
     libreoffice
-    steam
     github-desktop
+    mangohud # Performance viewer application for gaming
     
     # Shell
     zsh
@@ -153,7 +162,6 @@
     ripgrep
     fd
     eza
-    htop
     btop
     tldr
     fzf
@@ -182,6 +190,7 @@
     gamescope
     udisks2
     wl-clipboard
+    brightnessctl
 
     # Misc
     tmatrix

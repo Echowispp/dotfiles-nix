@@ -20,14 +20,14 @@ tooltip label {
 }
 
 #workspaces {
-    background: #64727D;
+    background: #271b43;
     margin: 5px;
     border-radius: 999px;
 }
 
 #workspaces button {
-    color: #44525D;
-    background: #64727D;
+    color: #8f7598;
+    background: #271b43;
     font-size: 12px;
     padding: 11px 12px 12px 12px;
     border-radius: 50%;
@@ -35,7 +35,7 @@ tooltip label {
 }
 
 #workspaces button.focused {
-    color: #ffffff;
+    color: #cba5b2;
 }
 
 #custom-spacer {
@@ -54,7 +54,7 @@ tooltip label {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #271b43;
     padding: 5px;
     border-radius: 999px;
     margin: 5px;
